@@ -10,8 +10,8 @@ google_maps = googlemaps.Client(key=APIKEY)
 gmaps.configure(api_key=APIKEY)
 
 
-def plot_route(start, end, fig, color, stroke_weight_line, route_mode='walking'):
-    directions_result = google_maps.directions(start, end, mode=route_mode)
+def route(start, end, fig, color, stroke_weight_line, mode='walking'):
+    directions_result = google_maps.directions(start, end, mode=mode)
     polyline_directions = polyline.decode(directions_result[0]['overview_polyline']['points'])
 
     polyline_result = [(a, b) for a, b in zip(polyline_directions, polyline_directions[1:])]

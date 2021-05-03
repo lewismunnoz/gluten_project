@@ -57,7 +57,7 @@ def election(restaurant_db):
     return dict_results, location_near, location_cheap, cheap_restaurant
 
 
-def map_figure(dict_results, location_near, location_cheap, lat_current, lng_current, route_mode):
+def map_figure(dict_results, location_near, location_cheap, lat_current, lng_current, mode):
     locations = [(rows_result['geometry.location.lat'],
                   rows_result['geometry.location.lng']) for rows_result in dict_results]
     restaurant_info = pin_template.template(dict_results)
@@ -66,11 +66,11 @@ def map_figure(dict_results, location_near, location_cheap, lat_current, lng_cur
     marker_layer = gmaps.marker_layer(now_location)
     fig.add_layer(marker_layer)
 
-    symbol_layer = gmaps.symbol_layer(locations, info_box_content=restaurant_info, scale=6, stroke_color="teal")
+    symbol_layer = gmaps.symbol_layer(locations, info_box_content=restaurant_info, scale=5, stroke_color="red")
     index_free = int("".join([str(integer) for integer in
                               [i for i in range(len(locations)) if locations[i] == location_near]]))
-    symbol_layer.markers[index_free].stroke_color = 'yellow'
-    google_maps_route.plot_route((lat_current, lng_current), location_near, fig, 'yellow', 7.0, route_mode)
+    symbol_layer.markers[index_free].stroke_color = 'blue'
+    google_maps_route.route((lat_current, lng_current), location_near, fig, 'blue', 7.0, mode)
 
     print("\n  Done!")
 
@@ -78,7 +78,7 @@ def map_figure(dict_results, location_near, location_cheap, lat_current, lng_cur
         index_near = int("".join([str(integer) for integer in
                                   [i for i in range(len(locations)) if locations[i] == location_cheap]]))
         symbol_layer.markers[index_near].stroke_color = 'green'
-        google_maps_route.plot_route((lat_current, lng_current), location_cheap, fig, 'green', 3.5, route_mode)
+        google_maps_route.route((lat_current, lng_current), location_cheap, fig, 'green', 3.5, mode)
         print("\n  The cheapest gluten_free restaurant is the one marked in the yellow route"
               " and the nearest one on the green route  \n")
     else:
@@ -86,4 +86,4 @@ def map_figure(dict_results, location_near, location_cheap, lat_current, lng_cur
 
     fig.add_layer(symbol_layer)
 
-    embed_minimal_html('.export.html', views=[fig])
+    embed_minimal_html('./maps/export.html', views=[fig])
