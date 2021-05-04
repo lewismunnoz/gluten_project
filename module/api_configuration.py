@@ -70,7 +70,7 @@ def map_figure(dict_results, location_near, location_cheap, lat_current, lng_cur
     index_free = int("".join([str(integer) for integer in
                               [i for i in range(len(locations)) if locations[i] == location_near]]))
     symbol_layer.markers[index_free].stroke_color = 'blue'
-    google_maps_route.route((lat_current, lng_current), location_near, fig, 'blue', 7.0, mode)
+    google_maps_route.route((lat_current, lng_current), location_near, fig, 'blue', 5.0, mode)
 
     print("\n  Done!")
 
@@ -78,7 +78,7 @@ def map_figure(dict_results, location_near, location_cheap, lat_current, lng_cur
         index_near = int("".join([str(integer) for integer in
                                   [i for i in range(len(locations)) if locations[i] == location_cheap]]))
         symbol_layer.markers[index_near].stroke_color = 'green'
-        google_maps_route.route((lat_current, lng_current), location_cheap, fig, 'green', 3.5, mode)
+        google_maps_route.route((lat_current, lng_current), location_cheap, fig, 'green', 5.0, mode)
         print("\n  The cheapest gluten_free restaurant is the one marked in the yellow route"
               " and the nearest one on the green route  \n")
     else:

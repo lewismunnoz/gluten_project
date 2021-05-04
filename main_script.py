@@ -16,7 +16,7 @@ def main(current_location, mode):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("-l", "--current_location", help="Please enter an address", dest='current_location',
-                        default='Jacinto Benavente Madrid')
+                        default='Calle Castelló Madrid')
     parser.add_argument("-m", "--route_mode", help="how are you getting there?", dest='mode',
                         default='walking')
     args = parser.parse_args()
