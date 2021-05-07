@@ -48,7 +48,7 @@ https://docs.google.com/presentation/d/1tTqxVQE1J5PJB8_Vsa4Cin1BTd-d-ELu2kfkdoID
 
 
 
-
-
 Note: This project would be better if every local improves their GoogleMyBusiness profiles adding all the information they can bring to their customers.
+
+Special Mention to my MCA.
 
