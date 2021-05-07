@@ -11,12 +11,12 @@ This script locates for you the best gluten free alternatives in your city and r
 - HTML (w3school level)
 
 
-### :thinking:**Application and situations you may find No More Gluten APP**:thinking:
+### :thinking:**Application and situations you may find No More Gluten APP interesting** :thinking:
 
 
-:heavy_check_mark: When you are in a city you don't and you may need to locate an establishment with gluten free options.
-:heavy_check_mark: When you discover that your tinder date does not eat gluten and you need some ideas
-:heavy_check_mark: When you just want to have a nice gluten_free meal with your friends.
+- :heavy_check_mark: When you are in a city you don't and you may need to locate an establishment with gluten free options.
+- :heavy_check_mark: When you discover that your tinder date does not eat gluten and you need some ideas
+- :heavy_check_mark: When you just want to have a nice gluten_free meal with your friends.
 
 
 ### :file_folder: **Folder structure**
