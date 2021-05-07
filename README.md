@@ -1,4 +1,4 @@
-# :no_entry::bread::no_entry: **No More Gluten App a.k.a. gluten_project
+# :no_entry::bread::no_entry: No More Gluten App
 
 
 
