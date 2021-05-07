@@ -1,23 +1,20 @@
 # Data Project README file
 
-### :raising_hand: **GLUTEN PROJECT** 
+### :woman_gesturing_no::no_entry::bread::croissant::no_entry::man_gesturing_no: **GLUTEN PROJECT** 
 
-### :baby: **Status**
-Ironhack Data Analytics Final Project
+### :person_running: **Status**
+Th
 
 
 ### :file_folder: **Folder structure**
 ```
 └── project
-    ├── __trash__
     ├── .gitignore
     ├── .env
     ├── requeriments.txt
     ├── README.md
-    ├── main_script.py
+    ├── main.py
     ├── info
-    ├── reports
-    ├── notebooks
     ├── module 
     └── data
       

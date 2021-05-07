@@ -2,12 +2,11 @@
 def template(dict_results):
     info_box_template = """
     <dl>
-    <dt>Establecimiento:</dt><dd>{name}</dd>
-    <dt>Tipo de comida:</dt><dd>{types}</dd>
-    <dt>Precio:</dt><dd>{price_level}/4.0</dd>
-    <dt>Puntuaciones de Google Maps:</dt><dd>{rating} en {user_ratings_total} evaluaciones</dd>
-
-    <dt>Dirección:</dt><dd>{vicinity}</dd>
+    </dl>Name: {name}</dl>
+    <dl>Type of food you may find:</dt><dd>{types}</dl>
+    <dl>Price Level (1-4): {price_level}/4.0</dl>
+    <dl>Google Rating: {rating} en {user_ratings_total} evaluaciones</dl>
+    <dl>Address: <a href="https://www.google.es/maps/search/{vicinity}">{vicinity}</a></dl>
     </dl>
     """
     restaurant_info = [info_box_template.format(**food) for food in dict_results]

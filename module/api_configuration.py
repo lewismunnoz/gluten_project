@@ -14,9 +14,9 @@ load_dotenv(dotenv_path)
 APIKEY = os.environ.get("APIKEY")
 
 
-def lat_lng_current_location(current_location):
+def lat_lng_location(location):
     gmaps_google = googlemaps.Client(key=APIKEY)
-    geocode = gmaps_google.geocode(current_location)
+    geocode = gmaps_google.geocode(location)
 
     lat = str(geocode[0]['geometry']['location']['lat'])
     lng = str(geocode[0]['geometry']['location']['lng'])
@@ -28,7 +28,7 @@ def lat_lng_current_location(current_location):
 def restaurants(lat, lng):
 
     url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+lat+","+lng +\
-          "&keyword=gluten_free&type=restaurant&language=es&rankby=distance&pagetoken&key="+APIKEY
+          "&keyword=gluten&type=food&language=es&rankby=distance&pagetoken&key="+APIKEY
     url_result = requests.get(url)
     url_result_convert = url_result.json()
     data = pd.json_normalize(url_result_convert['results'])
@@ -72,14 +72,14 @@ def map_figure(dict_results, location_near, location_cheap, lat_current, lng_cur
     symbol_layer.markers[index_free].stroke_color = 'blue'
     google_maps_route.route((lat_current, lng_current), location_near, fig, 'blue', 5.0, mode)
 
-    print("\n  Done!")
+    print("---Results retrieved! Please, find attached an html file with the map with all the info you need.---")
 
     if location_near != location_cheap:
         index_near = int("".join([str(integer) for integer in
                                   [i for i in range(len(locations)) if locations[i] == location_cheap]]))
         symbol_layer.markers[index_near].stroke_color = 'green'
         google_maps_route.route((lat_current, lng_current), location_cheap, fig, 'green', 5.0, mode)
-        print("\n  The cheapest gluten_free restaurant is the one marked in the yellow route"
+        print("\n  The cheapest gluten free restaurant is the one marked in the blue route"
               " and the nearest one on the green route  \n")
     else:
         print("\n  The nearest one is also the cheapest one :)!  \n")
