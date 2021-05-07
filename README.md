@@ -35,7 +35,7 @@ This script locates for you the best gluten free alternatives in your city and r
 
 
 
-### :full_moon_with_face: **ToDo**
+### :full_moon_with_face: **Wish List**
 1. I wish i have the opportunity to embeb the export obtained with this script in a web app where the users could see much more information.
 
 2. Webscrap Tripadvisor web just to obtain more detailed information from any establishment
