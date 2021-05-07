@@ -1,6 +1,6 @@
-# Data Project README file
+# :no_entry::bread::no_entry: **No More Gluten App a.k.a. gluten_project
 
-### :no_entry::bread::no_entry: **No More Gluten App a.k.a. gluten_project** 
+
 
 ### :running: **Main purpose of the project**
 This script locates for you the best gluten free alternatives in your city and remarks the cheapest one and the one which is closest to you. This may be part of a bigger app.
