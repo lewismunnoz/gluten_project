@@ -86,4 +86,4 @@ def map_figure(dict_results, location_near, location_cheap, lat_current, lng_cur
 
     fig.add_layer(symbol_layer)
 
-    embed_minimal_html('./maps/export.html', views=[fig])
+    embed_minimal_html('./maps/routes.html', views=[fig])
